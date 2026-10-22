@@ -4,6 +4,8 @@
         "password": "roroda100155@@",
         "name": "로로다연",
         "phone": "010-8967-7572",
+        "security_question": "1",
+        "security_answer": "책",
         "joined_at": "2026-10-21 17:42:50"
     },
     {
@@ -11,6 +13,17 @@
         "password": "siskfeo1@",
         "name": "이혜",
         "phone": "010-2345-6342",
+        "security_question": "1",
+        "security_answer": "책",
+        "joined_at": "2026-10-22"
+    },
+    {
+        "user_id": "slei@geisl.com",
+        "password": "elise23@",
+        "name": "dlefl",
+        "phone": "01011111111",
+        "security_question": "3",
+        "security_answer": "강아지",
         "joined_at": "2026-10-22"
     }
 ]

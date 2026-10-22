@@ -108,6 +108,24 @@ class MemberService:
 
             break
 
+        # 비밀 번호 찾기용 질문 선택
+        print("\n비밀번호 찾기에 사용할 보안 질문을 선택해 주세요.")
+        print("1. 가장 좋아하는 책은 무엇인가요?",
+              "\n2. 가장 좋아하는 작가는 누구인가요?",
+              "\n3. 가장 좋아하는 동물은 무엇인가요?",
+              "\n4. 가장 기억에 남는 여행지는 어디인가요?",
+              "\n5. 가장 좋아하는 계절은 무엇인가요?")
+        while True:
+            security_question = input("번호를 입력해 주세요: ").strip()
+
+            if not 1 <= int(security_question) <= 5:
+                print("올바른 번호를 입력해주세요")
+                continue
+
+            break 
+
+        security_answer = input("질문에 대한 답을 입력해 주세요: ")
+
         # 가입일 자동 저장 
         joined_at = datetime.now().strftime("%Y-%m-%d")
 
@@ -116,10 +134,12 @@ class MemberService:
             "name": name,
             "password": password,
             "phone": phone,
-            "joined_at": joined_at
+            "joined_at": joined_at,
+            "security_question": security_question,
+            "security_answer": security_answer
         }
 
-        new_member = Member(user_id, password, name, phone, joined_at)
+        new_member = Member(user_id, password, name, phone,security_question,security_answer, joined_at)
         self.members[user_id] = new_member
         self.save_members()
 
